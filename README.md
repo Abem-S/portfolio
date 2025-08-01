@@ -6,6 +6,11 @@ Welcome to my personal portfolio — a CSS-only experience that blends logic, em
 
 ---
 
+## 🌐 Live Demo
+Visit the live site: [abem-s.github.io/portfolio](https://abem-s.github.io/portfolio/)
+
+---
+
 ## ✨ Features
 
 ### 🎬 Interactivity
