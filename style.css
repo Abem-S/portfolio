@@ -1,0 +1,129 @@
+/*remove default styles*/
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* style for root element */
+:root{
+    --primary-font:'Courier New', monospace;
+    --primary-color:#00ff98;
+}
+
+/* style for body */
+body{
+    background: radial-gradient(circle at center, #0f0f0f, #000 85%);
+    font-family: var(--primary-font);
+    color:var(--primary-color);
+    min-height:100vh;
+    line-height:1.5;
+}
+
+/*intro screen*/
+#intro{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    text-align:center;
+    height:100vh;
+    animation: fadeIn 2s ease-in-out;
+}
+
+/*fade-in animation*/
+@keyframes fadeIn {
+    from {
+        opacity: 0; transform: translateY(25px);
+    }
+    to {
+        opacity: 1; transform: translateY(0);
+    }
+}
+
+#intro h1{
+    font-size:2.5rem;
+    text-shadow:0 0 6px var(--primary-color);
+}
+
+#intro p{
+    margin-top:1rem;
+    font-size:1.2rem;
+    color:#ccc;
+}
+
+.enter-btn{
+    margin-top: 2rem;
+    padding: 0.7rem 2rem;
+    background-color:transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+    cursor:pointer;
+    transition: all 0.3s ease;
+}
+
+.enter-btn:hover{
+    background-color: var(--primary-color);
+    color: #000;
+    box-shadow: 0 0 6px var(--primary-color);  
+}
+
+/*toggle*/
+#enter:checked ~ #intro, #enter{
+    display: none;
+}
+
+#enter:checked ~ #portfolio{
+    display:flex;
+}
+
+/*portfolio section*/
+#portfolio{
+    display:none;
+    flex-direction:column;
+    align-items:center;
+    padding: 2.5rem;
+    animation: fadeIn 2s ease-in-out; /*keyframe already defined above*/
+}
+
+
+/*header style*/
+header{
+    text-align:center;
+    margin-bottom:2rem;
+}
+
+header h2{
+    font-size:2rem;
+    text-shadow:0 0 6px var(--primary-color);
+}
+
+nav{
+    margin-top: 1rem;
+    display:flex;
+    justify-content:center;
+    gap:1rem;
+    flex-wrap: wrap;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--primary-color);
+    border:2px solid var(--primary-color);
+    padding:0.5rem 1rem;
+    border-radius:6px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover{
+    background-color: var(--primary-color);
+    color: #000;
+    box-shadow: 0 0 6px var(--primary-color);
+}
+
+header, main, footer { 
+    width: 100%;
+    max-width: 900px;
+}
+
+
